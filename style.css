@@ -14,7 +14,7 @@ header {
 }
 .list li {
   display: inline-block;
-  margin-right: 1.3%;
+  margin-right: 0.6em;
 }
 .list a {
   text-decoration: none;
@@ -23,7 +23,7 @@ header {
   padding: 0.6em 1em 0.6em 1em;
   border-radius: 8px;
   font-weight: 600;
-  font-size: 97%;
+  font-size: 100%;
   letter-spacing: 1px;
   transition: 0.8s;
 }
@@ -90,7 +90,7 @@ header {
 .work, .portfolio, .contact {
   float: left;
   width: 100%;
-  background: #fafafa;
+  background: url(images/bg.png) #fafafa;
   padding: 8em 0 11em 0;
   box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -149,20 +149,29 @@ header {
 /*______________________Portfolio________________________*/
 
 .portfolio {
-  background: #f4f4f4;
+  background: url(images/bg.png) #f4f4f4;
 }
 .portfolio section {
   padding: 0 0 2.5em 0;
   width: 28.5%;
 }
+.portfolio img {
+  cursor: pointer;
+  width: 100%;
+}
 .portfolio h3 {
   margin-top: 1.5em;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.portfolio h3:hover {
+  color: #43B3E0;
 }
 
 /*___________________Contact_______________________________*/
 
 .contact {
-  background: #303030;
+  background: url(images/bg.png) #303030;
   padding: 5em 0 8em 0;
 }
 .contact h2 {
@@ -173,7 +182,7 @@ header {
   text-shadow: -1px -1px 0px #181818;
 }
 form {
-  margin-left: 16em;
+  margin-left: 14em;
 }
 .contact input, textarea {
   margin-bottom: 1.5em;
@@ -185,29 +194,132 @@ form {
   border-radius: 8px;
   color: #bbb;
   font-family: 'Open Sans', sans-serif;
-  line-height: 1.85em;
+  line-height: 2em;
   box-shadow: inset 0px 2px 3px 1px rgba(0, 0, 0, 0.05), 0px 1px 0px 0px rgba(255, 255, 255, 0.025);
 }
 .name {
-  width: 34%;
-  margin-right: 1.8em;
+  width: 36.5%;
+  margin-right: 1.6em;
 }
 .email {
   margin-left: 12em;
 }
-.sub, textarea, .contact a, hr, .contact span, .icons {
+.sub, textarea, hr, .contact span, .icons {
   clear: left;
   float: left;
 }
 .sub, textarea {
-  width: 73%;
+  width: 77.5%;
 }
-
-.fa-twitter {
+::-webkit-input-placeholder {
+  color: #414141;
+}
+.contact section {
+  margin: 3.5em 2em 2em 27em;
+  float: left;
+}
+.buttons a {
+  margin-right: 2em;
+  font-size: 1.1em;
+  padding: 1.4em 2.35em 1.4em 2.35em;
+  letter-spacing: 1px;
+}
+.btn1 {
+  background: #3faad5;
+}
+.btn2 {
+  background: #3e3e3e;
+  box-shadow: inset 0px 0px 0px 1px #242424, inset 0px 2px 1px 0px rgba(255, 255, 255, 0.2);
+}
+.btn2:hover {
+  background: #474747;
+}
+hr {
+  border: 0;
+  border-top: solid 1px #444;
+  border-top-color: rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
+  margin: 7em 0 5em 14em;
+  width: 67%;
+}
+.contact span {
+  color: #ffffff;
+  font-size: 1.6em;
+  font-weight: 700;
+  margin-left: 43%;
+  margin-bottom: 1em;
+}
+.icons {
+  margin-left: 33%;
+  margin-bottom: -4em;
+}
+.icons li {
+  display: inline-block;
+  margin: 0.25em;
+}
+.fa-twitter, .fa-facebook, .fa-dribbble, .fa-linkedin, .fa-tumblr, .fa-google-plus, .fa-github {
+  position: relative;
   color: #2E2E2E;
   box-shadow: inset 0px 0px 0px 1px #282828, inset 0px 2px 1px 0px rgba(255, 255, 255, 0.1);
-  background: #444;
+  background: #404040;
+  border-radius: 6px;
+  display: block;
+  width: 48px;
+  height: 48px;
+  transition: 0.3s;
 }
-.fa-twitter::before {
-  font-size: 3em;
+.fa-twitter:hover, .fa-facebook:hover, .fa-dribbble:hover, .fa-linkedin:hover, .fa-tumblr:hover, .fa-google-plus:hover, .fa-github:hover {
+  -webkit-transform: translateX(-5px);
+  transform: translateY(-5px);
+}
+.fa-twitter:hover {
+  background: #2DAAE4;
+}
+.fa-facebook:hover {
+  background: #3C5A98;
+}
+.fa-dribbble:hover {
+  background: #C4376B;
+}
+.fa-linkedin:hover {
+  background: #006599;
+}
+.fa-tumblr:hover {
+  background: #51718A;
+}
+.fa-google-plus:hover {
+  background: #DA2713;
+}
+.fa-github:hover {
+  background: #FAFAFA;
+}
+.fa-twitter::before, .fa-facebook::before, .fa-dribbble::before, .fa-linkedin::before, .fa-tumblr::before, .fa-google-plus::before, .fa-github::before {
+  line-height: 48px;
+  font-size: 26px;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1);
+}
+footer {
+  clear: left;
+  float: left;
+  margin-left: 29%;
+}
+footer i {
+  float: left;
+  font-size: 0.9em;
+  margin-top: 3em;
+  color: #666;
+  text-shadow: -1px -1px 0px #181818;
+}
+footer i:nth-child(2), footer i:last-child {
+  border-left: solid 1px rgba(0, 0, 0, 0.5);
+  box-shadow: -1px 0px 0px 0px rgba(255, 255, 255, 0.1);
+  margin-left: 1em;
+  padding-left: 1em;
+}
+footer a {
+  color: #666;
+  transition: 0.5s;
+}
+footer a:hover {
+  color: #43B3E0;
 }
